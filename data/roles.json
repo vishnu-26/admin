@@ -1,0 +1,34 @@
+[
+  {
+    "model": "user.role",
+    "pk": 1,
+    "fields": {
+      "name": "Admin",
+      "permissions": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "model": "user.role",
+    "pk": 2,
+    "fields": {
+      "name": "Editor",
+      "permissions": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  }
+  
+]

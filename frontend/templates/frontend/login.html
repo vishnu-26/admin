@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class='container'>
+        <div class='row'>
+            <div class='text-center col-sm-12'>
+                <h1>Admin Login</h1>
+                
+                <div class='col-sm-4 col-sm-offset-4'>
+                    <form id="form">
+                        {% csrf_token %}
+                        <input id="username" class="form-control" type="text" name="username" placeholder="Admin id">
+                        <br>
+                        <input id="pass" class="form-control" type="password" name="password" placeholder="Password">
+                        <br>
+                        <input id="submit" class="btn btn-primary" type="submit" >
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    <!-- <script type = 'text/javascript'>
+
+        function getCookie(name) {
+		    var cookieValue = null;
+		    if (document.cookie && document.cookie !== '') {
+		        var cookies = document.cookie.split(';');
+		        for (var i = 0; i < cookies.length; i++) {
+		            var cookie = cookies[i].trim();
+		            // Does this cookie string begin with the name we want?
+		            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+		                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		                break;
+		            }
+		        }
+		    }
+		    return cookieValue;
+		}
+
+		var csrftoken = getCookie('csrftoken');
+
+        var form = document.getElementById('form')
+        form.addEventListener('submit',function(e){
+            e.preventDefault()
+            console.log('form submitted1')
+            
+            var url = 'http://localhost:8000/api/todo-login/';
+       
+            var user_name = document.getElementById('username').value;
+            var pass_word = document.getElementById('pass').value;
+
+            /*if(pass_word == null){
+                console.log("wrong")
+
+            }*/
+            
+            fetch(url,{
+                method: 'POST',
+                headers:{
+                    'Content-type':'application/json',
+                     'X-CSRFToken':csrftoken,
+                },
+                body:JSON.stringify({'username':user_name,'password':pass_word})
+
+
+            }
+            ).then(function(response){
+                    
+                    window.location.replace('http://localhost:8000/feed')
+            
+            })
+        
+        })
+
+    </script> -->
+
+
+</body>
+</html>
