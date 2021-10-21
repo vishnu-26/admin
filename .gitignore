@@ -142,3 +142,5 @@ cython_debug/
 #docker db volume
 .dbdata/
 .db_data/
+
+pyvenv.cfg
